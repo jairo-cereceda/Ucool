@@ -41,6 +41,7 @@ services:
 
 volumes:
   ucool-mongo-db:
+  node_modules_backend:
 
 networks:
   ucool-net:
