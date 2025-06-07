@@ -13,4 +13,4 @@ COPY --from=builder /usr/src/ .
 
 EXPOSE 5000
 
-CMD [ "node", "index.js" ]
+CMD [ "node", "src/index.js" ]
