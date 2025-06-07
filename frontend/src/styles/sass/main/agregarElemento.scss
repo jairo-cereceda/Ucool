@@ -1,0 +1,36 @@
+.agregar-elemento{
+    &__imgControl{
+        background-color: var(--uc-color-white-default);
+        opacity: 0.6;
+        
+        &__btn{
+            position: relative;
+            width: 100%;
+            cursor: pointer;
+            &__icon{
+                .img-edit{
+                    font-size: 10rem;
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+    &__imgControl:hover{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .agregar-elemento{
+        grid-template-columns: 1fr;
+
+        .agregar-elemento__imgControl{
+            height: 30rem;
+
+            img{
+                height: 30rem;
+            }
+        }
+    }
+}

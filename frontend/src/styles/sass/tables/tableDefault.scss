@@ -1,0 +1,45 @@
+.tabla-default{
+    border-spacing: 3px;
+     border-collapse: separate;
+     width: 100%;
+     color: var(--uc-color-white-default);
+     
+    &__body{
+        gap: 3px;
+        &__row{
+            font-size: 1.6rem;
+            &__th{
+                text-align: start;
+                padding: 2rem;
+                font-weight: 700;
+            }
+
+            &__td{
+                padding: 2rem;
+                font-weight: 500;
+                text-align: start;
+            }
+        }
+
+        &__row--par{
+            background-color: var(--uc-color-secondary-600);
+        }
+
+        &__row--impar{
+            background-color: var(--uc-color-secondary-500);
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .tabla-default__body__row{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+
+        &__td{
+            font-size: 1.2rem;
+        }
+    }
+  
+}

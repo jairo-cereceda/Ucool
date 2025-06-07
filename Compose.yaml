@@ -1,0 +1,41 @@
+services:
+  mongo:
+    build:
+      context: ./mongo
+      dockerfile: Dockerfile
+    container_name: ucool-mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+    volumes:
+      - ucool-mongo-config:/data/configdb
+      - ucool-mongo-db:/data/db
+    networks:
+      - red-mongo-ucool
+    ports:
+      - "27017:27017"
+
+  mongo-express:
+    image: mongo-express
+    container_name: ucool-mongo-express
+    restart: always
+    depends_on:
+      - mongo
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: admin123
+      ME_CONFIG_MONGODB_SERVER: ucool-mongo
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin123
+    networks:
+      - red-mongo-ucool
+    ports:
+      - "8081:8081"
+
+volumes:
+  ucool-mongo-config:
+  ucool-mongo-db:
+
+networks:
+  red-mongo-ucool:

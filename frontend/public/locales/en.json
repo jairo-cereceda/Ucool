@@ -1,0 +1,22 @@
+{
+  "help": {
+    "faq": {
+      "howToAddEmployee": {
+        "question": "How do I add a new employee?",
+        "answer": "To add a new employee, go to 'Manage > Users'. There you’ll find the option to add a new user, fill out their basic information (name, email, role, etc.), and save. Make sure to assign them a role that fits their responsibilities in the company."
+      },
+      "givePrivileges": {
+        "question": "I want to give privileges to my employee. How do I do that?",
+        "answer": "You can modify an employee's privileges by clicking 'Edit user' under 'Manage > Users'. When editing, select the appropriate role or toggle specific permissions you want to grant. Don’t forget to save your changes."
+      },
+      "createDiscounts": {
+        "question": "Can I create discounts to use later?",
+        "answer": "Currently, it is not possible to create discounts in advance for later use. This feature may be added in future updates. Thank you for your interest!"
+      },
+      "metricsCalculation": {
+        "question": "How are the metrics calculated?",
+        "answer": "Metrics are automatically calculated based on platform activity such as sales, logins, and employee performance. We use averages, aggregates, and trends to provide clear insights. You can view them in the 'Reports' or 'Dashboard' section."
+      }
+    }
+  }
+}

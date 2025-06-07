@@ -1,0 +1,48 @@
+.listaElementos{
+    .no-elementos{
+        font-size: 1.6rem;
+    }
+
+    &__ul{
+        &__li{
+            border-bottom: 1px solid var(--uc-color-gray-default-light);
+            padding: 2rem 0;
+            &__content{
+
+                &__left{
+                font-size: 1.6rem;
+
+                &__btn{
+                    background-color: var(--uc-color-details-300);
+                    padding: 0.6rem;
+                    border-radius: 50%;
+                    color: var(--uc-color-white-default);
+                    transition: 0.2s all ease;
+                }
+
+                &__btn:hover{
+                    background-color: var(--uc-color-details-500);
+                }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .listaElementos__ul__li__content{
+        flex-direction: column;
+
+        &__left{
+            flex-direction: column;
+        }
+    }
+
+    .vista-producto__container__body__item{
+        margin: 2rem 0 0 0;
+    }
+    
+    .editar-mobile-flex{
+        flex-direction: column;
+    }
+}

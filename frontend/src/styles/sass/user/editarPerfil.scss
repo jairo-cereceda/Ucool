@@ -1,0 +1,62 @@
+.editarPerfil{
+
+    &__head{
+        background-color: var(--uc-color-secondary-100);
+        padding: 2rem 20rem 12rem 20rem;
+
+        &__title{
+            font-size: 4.8rem;
+            font-weight: 700;
+        }
+
+        &__img{
+            width: 100%;
+            height: 50rem;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        &__img:hover{
+            background-color: white;
+        }
+    }
+
+    &__body{
+        &__img{
+            width: 12rem;
+            height: 12rem;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 5px solid var(--uc-color-secondary-200);
+        }
+
+        transform: translateY(-10%);
+
+        &__formContainer{
+            margin: 0 auto;
+            max-width: 70rem;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .editarPerfil{
+
+        &__head{
+            padding: 0;
+            background-color: var(--uc-color-secondary-200);
+
+            &__title{
+                padding: 1rem 1rem 0 1rem;
+            }
+
+            &__img{
+                width: 100%;
+                height: 21rem;
+            }
+
+        }
+    }
+}

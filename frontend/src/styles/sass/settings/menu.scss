@@ -1,0 +1,32 @@
+.settings-nav{
+    background-color: var(--uc-color-secondary-100);
+    padding: 2rem;
+    height: 100%;
+
+    &__title{
+        font-size: var(--uc-font-size-h1);
+        font-weight: 700;
+        padding-right: 10rem;
+    }
+
+    &__container{
+        &__btn{
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 2rem 15rem 2rem 2rem;
+            margin-right: 2rem;
+            transition: 0.1s all ease;
+            text-align: start;
+        }
+
+        &__btn:hover{
+            background-color: var(--uc-color-secondary-200);
+            border-radius: 10px;
+        }
+    }
+}
+
+.settings-nav__container__btn--activo{
+    background-color: var(--uc-color-secondary-200);
+    border-radius: 10px;
+}

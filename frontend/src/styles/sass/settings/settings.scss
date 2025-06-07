@@ -1,0 +1,22 @@
+.settings{
+    min-width: 50vw;
+
+    &__title{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    &__description{
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--uc-color-white-default-clear);
+    }
+
+    &__group{
+        border-bottom: 1px solid var(--uc-color-white-default-clear);
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+}

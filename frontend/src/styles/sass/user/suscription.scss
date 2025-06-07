@@ -1,0 +1,57 @@
+.suscription{
+    margin: auto auto;
+    color: var(--uc-color-white-default);
+
+    &__container{
+        border-right: 5px solid var(--uc-color-primary-500);
+        background-color: var(--uc-color-secondary-900);
+        box-shadow: 10px 0 20px 10px rgba(255, 255, 255, 0.2);
+        max-width: 80rem;
+        right:0;
+        height: 100%;
+        padding: 2rem 4rem 2rem 4rem;
+        font-size: 1.6rem;
+
+        &__email{
+            margin: 3rem 0 3rem 0;
+            width: 100%;
+            border-radius: 20px;
+            padding: 1rem;
+            border: 1px solid white;
+            background-color: var(--uc-color-secondary-800);
+        }
+
+        input{
+            width: 100%;
+            border-radius: 20px;
+            padding: 1rem;
+            border: 1px solid white;
+            background-color: var(--uc-color-secondary-800);
+        }
+
+        &__submit{
+            background-color: var(--uc-color-details-300);
+            padding: 1rem;
+            border-radius: 20px;
+            transition: 0.2s ease all;
+            cursor: pointer;
+        }
+
+        &__logout{
+            background-color: var(--uc-color-secondary-300);
+            padding: 1rem;
+            border-radius: 20px;
+            transition: 0.2s ease all;
+            cursor: pointer;
+        }
+
+        &__submit:hover{
+            background-color: var(--uc-color-details-400);
+        }
+
+
+        &__logout:hover{
+            background-color: var(--uc-color-secondary-400);
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.menuAdministrar{
+    font-size: 1.6rem;
+    button, a{
+        background-color: var(--uc-color-details-300);
+        color: var(--uc-color-white-default);
+        width: 3.7rem;
+        height: 3.7rem;
+        transition: 0.2s all ease;
+    }
+
+    a.menuAdministrar__agregar{
+        width: auto;
+        padding-inline: 1rem;
+    }
+
+    button:hover, a:hover{
+        background-color: var(--uc-color-details-500);
+    }
+}
+
+ .menuAdministrar .editar-activo{
+    background-color: var(--uc-color-details-500);
+}
+
+.verProductosOcultos{
+    background-color: var(--uc-color-details-300);
+    color: var(--uc-color-white-default);
+    width: 3.7rem;
+    height: 3.7rem;
+    transition: 0.2s all ease;
+    border-radius: 30px;
+    width: 100%;
+    font-size: 1.6rem;
+    padding-inline: 1rem;
+    cursor: pointer;
+}
+
+.verProductosOcultos:hover{
+    background-color: var(--uc-color-details-500);
+}
+
+.verProductosOcultos-activo{
+    background-color: var(--uc-color-details-500);
+}
+
+@media (max-width: 1024px) {
+    .menuAdministrar{
+        font-size: 1.2rem;
+
+        a.menuAdministrar__agregar{
+            padding-top: 1rem;
+        }
+
+
+        .button, a{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .verProductosOcultos{
+            font-size: 1.2rem;
+        }
+        
+        button, a{
+            background-color: var(--uc-color-details-300);
+        }
+    }
+
+    .verProductosOcultos:hover{
+        background-color: var(--uc-color-details-300);
+    }
+}

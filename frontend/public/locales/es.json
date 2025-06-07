@@ -1,0 +1,22 @@
+{
+  "help": {
+    "faq": {
+      "howToAddEmployee": {
+        "question": "¿Cómo dar de alta a un empleado?",
+        "answer": "Para dar de alta a un nuevo empleado, ve a la sección 'Administrar > Usuarios'. Allí encontrarás la opción para agregar un nuevo usuario, completar su información básica (nombre, correo, rol, etc.) y guardarlo. Asegúrate de asignarle un rol adecuado según sus funciones en la empresa."
+      },
+      "givePrivileges": {
+        "question": "Quiero darle privilegios a mi empleado, ¿cómo lo hago?",
+        "answer": "Puedes modificar los privilegios de un empleado desde la opción 'Editar usuario' dentro de 'Administrar > Usuarios'. Al editar, selecciona el rol adecuado o activa los permisos específicos que quieras asignar. Recuerda guardar los cambios para que surtan efecto."
+      },
+      "createDiscounts": {
+        "question": "¿Puedo crear descuentos para usarlos más tarde?",
+        "answer": "Por el momento, no es posible crear descuentos anticipados para usarlos después. Esta funcionalidad podría añadirse en futuras actualizaciones. ¡Gracias por tu interés!"
+      },
+      "metricsCalculation": {
+        "question": "¿Cómo se calculan las métricas?",
+        "answer": "Las métricas se calculan automáticamente a partir de la actividad registrada en la plataforma, como ventas, accesos y rendimiento del personal. Utilizamos promedios, acumulados y tendencias para ofrecer una visión clara del desempeño. Puedes verlas en la sección de 'Reportes' o 'Dashboard'."
+      }
+    }
+  }
+}

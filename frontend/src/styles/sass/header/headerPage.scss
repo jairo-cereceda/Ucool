@@ -1,0 +1,25 @@
+.header{
+    &__nav{
+        background-color: var(--uc-color-secondary-900);
+        border-bottom: 4px solid var(--uc-color-primary-500);
+        padding: 0.5rem;
+        &__home{
+            &__logo{
+               width: 14rem; 
+            }
+        }
+
+        &__access{
+            background-color: var(--uc-color-details-300);
+            color: var(--uc-color-white-default);
+            font-size: 1.6rem;
+            border-radius: 10px;
+            padding: 1.2rem 3.2rem;
+            transition: 0.3s all ease;
+        }
+
+        &__access:hover{
+            background-color:  var(--uc-color-details-400);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.editar-submit{
+    margin-top: 2rem;
+    background-color: var(--uc-color-details-300);
+    font-weight: 700;
+    color: var(--uc-color-white-default);
+    border-radius: 10px;
+    font-size: 1.6rem;
+    padding: 2rem 5rem;
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+
+.editar-submit:hover{
+    background-color: var(--uc-color-details-500);
+}

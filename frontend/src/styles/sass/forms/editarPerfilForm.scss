@@ -1,0 +1,22 @@
+.formularioPerfil{
+    &__group{
+        font-size: 2rem;
+        &__label{
+            font-weight: 700;
+        }
+        
+        &__input{
+            width: 100%;
+            padding: 1rem;
+            background-color: var( --uc-color-secondary-50);
+            border-radius: 10px;
+            max-width: 70rem;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .formularioPerfil{
+        padding: 2rem;
+    }
+}

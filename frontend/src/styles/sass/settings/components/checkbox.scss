@@ -1,0 +1,46 @@
+.check-setting{
+    margin-top: 1.5rem;
+
+    &__label{
+        &__title{
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        &__input{
+            display: none;
+        }
+
+        &__toggle{
+            cursor: pointer;
+            width: 5.5rem;
+            height: 1.5rem;
+            background-color: var(--uc-color-secondary-300);
+            border-radius: 30px;
+            position: relative;
+            transition: 0.3s all ease;
+
+            &__circle{
+                width: 2.4rem;
+                height: 2.4rem;
+                border-radius: 50%;
+                background-color: var(--uc-color-white-default);
+                position: absolute;
+                transition: 0.3s all ease;
+                transform: translateY(-15%);
+            }
+        }
+
+        &__toggle:hover{
+            background-color: var(--uc-color-secondary-400);
+        }
+
+        &__input:checked + .check-setting__label__toggle{
+            background-color: var(--uc-color-details-700);
+        }
+
+        &__input:checked + .check-setting__label__toggle .check-setting__label__toggle__circle{
+            transform: translate(150%, -15%);
+        }
+    }
+}

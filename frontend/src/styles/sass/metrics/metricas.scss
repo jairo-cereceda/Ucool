@@ -1,0 +1,21 @@
+.metricas{
+    padding: 1rem 10rem;
+    &__title{
+        font-size: var(--uc-font-size-h1);
+        font-weight: 700;
+        text-align: start;
+    }
+}
+
+@media (max-width: 1024px) {
+    .metricas{
+        padding: 1rem;
+        &__body{
+            display: grid;
+            grid-template-columns: 1fr;
+
+            
+        }
+        
+    }
+}

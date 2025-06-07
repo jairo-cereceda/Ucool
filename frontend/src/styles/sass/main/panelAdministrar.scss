@@ -1,0 +1,20 @@
+.panelAdministrar{
+    overflow: hidden;
+    &__listado{
+        background-color: var(--uc-color-white-default);
+        padding: 3rem;
+    }
+
+    &__form{
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+   .panelAdminsitrar-list{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+  
+}

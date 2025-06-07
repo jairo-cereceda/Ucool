@@ -1,0 +1,102 @@
+.registroEst{
+    margin: auto auto;
+    color: var(--uc-color-white-default);
+    border-radius: 27px;
+
+    &__container{
+
+        &__div{
+            height: 63rem;
+            border-radius: 22px;
+        }
+
+        &__main{
+            border: 5px solid var(--uc-color-primary-500);
+            background-color: var(--uc-color-secondary-900);
+            max-width: 80rem;
+            border-radius: 22px;
+            right:0;
+            height: 100%;
+            padding: 2rem 4rem 2rem 4rem;
+
+            &__titulo{
+                font-size: 5.3rem;
+                font-weight: 500;
+                text-align: center;
+                padding: 0 2rem;
+            }
+
+            &__formulario{
+                margin-top: 5rem;
+                &__input{
+                    background-color: var(--uc-color-secondary-200);
+                    border-radius: 15px;
+                    width: 100%;
+                    height: 5rem;
+                    color: var(--uc-color-black-default);
+                    padding-left: 10px;
+                    font-size: 1.3rem;
+                    transition: 0.1s all ease;
+                }
+
+                &__input:focus{
+                    outline: none;
+                    background-color: var(--uc-color-secondary-300);
+                }
+
+                &__forget{
+                    color: var(--uc-color-primary-500);
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                }
+
+                &__botones{
+                    border-top: 1px solid var( --uc-color-white-default-clear);
+                    margin-top: 1.5rem;
+                    &__registrar{
+                        background-color: var(--uc-color-primary-500);
+                        margin-top: 1.5rem;
+                        border-radius: 15px;
+                        width: 100%;
+                        height: 5rem;
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        transition: 0.3s all ease;
+                    }
+
+                    &__registrar:hover{
+                        background-color: var(--uc-color-primary-600);
+                    }
+
+                
+                }
+
+                &__otro{
+                    font-size: 1.3rem;
+
+                    a{
+                        color: var(--uc-color-primary-400);
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .registroEst{
+        width: 10rem;
+
+        &__container{
+            &__main{
+                max-width: 35rem;
+                
+                &__titulo{
+                    font-size: 3rem;
+                }
+            }
+
+        }
+    }
+}

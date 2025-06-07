@@ -1,0 +1,18 @@
+.modal-stock{
+    &__main{
+        background-color: var(--uc-color-secondary-400);
+        border-radius: 27px;
+        padding: 1rem;
+        overflow-y: auto;
+        max-height: 30rem;
+
+        &__list{
+            padding: 2rem;
+            &__item{
+                font-size: 1.6rem;
+                padding: 1rem;
+                border-bottom: 1px solid var( --uc-color-white-default-clear);
+            }
+        }
+    }
+}

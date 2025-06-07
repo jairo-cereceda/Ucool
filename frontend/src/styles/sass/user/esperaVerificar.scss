@@ -1,0 +1,45 @@
+.esperaVerificar{
+    &__container{
+            border-radius: 30px;
+            width: 50%;
+            padding: 10rem;
+            background-color: var(--uc-color-secondary-500);
+            color: var(--uc-color-secondary-50);
+
+            &__title{
+                font-size: var(--uc-font-size-h1);
+                font-weight: 700;
+                margin-bottom: 2rem;
+            }
+    
+            &__info{
+                font-size: 2rem;
+            }
+        
+        
+    }
+}
+
+@media (max-width: 1024px) {
+    .esperaVerificar{
+        &__container{
+            border-radius: 30px;
+            width: 80%;
+            padding: 2rem;
+            background-color: var(--uc-color-secondary-500);
+            color: var(--uc-color-secondary-50);
+
+            &__title{
+                font-size: var(--uc-font-size-h1);
+                font-weight: 700;
+                margin-bottom: 2rem;
+            }
+    
+            &__info{
+                font-size: 2rem;
+            }
+        
+        
+    }
+    }
+}

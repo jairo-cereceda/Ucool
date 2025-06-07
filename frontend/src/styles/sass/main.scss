@@ -1,0 +1,47 @@
+@use "variables.scss";
+@use "main/venta.scss";
+@use "header/headerMain.scss";
+@use "header/headerPage.scss";
+@use "user/login.scss";
+@use "user/register.scss";
+@use "footer/footer.scss";
+@use "main/menuAdministrar.scss";
+@use "home/card.scss";
+@use "information/contacto.scss";
+@use "information/ayuda.scss";
+@use "settings/menu.scss";
+@use "settings/settings.scss";
+@use "settings/components/radio.scss";
+@use "settings/components/checkbox.scss";
+@use "navigation/breadcumb.scss";
+@use "tables/tableDefault.scss";
+@use "main/vistaProducto.scss";
+@use "forms/editarProducto.scss";
+@use "user/perfil.scss";
+@use "forms/components/submit.scss";
+@use "forms/editarPerfilForm.scss";
+@use "user/editarPerfil.scss";
+@use "metrics/components/metricCard.scss";
+@use "metrics/metricas.scss";
+@use "user/esperaVerificar.scss";
+@use "main/agregarElemento.scss";
+@use "main/panelAdministrar.scss";
+@use "main/listaElementos.scss";
+@use "modals/modalDefault.scss";
+@use "modals/finCompraModal.scss";
+@use "modals/discountModal.scss";
+@use "modals/deleteModal.scss";
+@use "modals/stockModal.scss";
+@use "user/registroEstablecimiento.scss";
+@use "user/suscription.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=sucp');
+
+body{
+  background-color: var(--uc-color-secondary-200);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+}

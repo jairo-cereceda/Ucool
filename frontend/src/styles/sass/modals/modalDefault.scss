@@ -1,0 +1,56 @@
+.modal{
+    border-radius: 30px;
+    background-color: var(--uc-color-secondary-500);
+    padding: 1rem;
+    color: var(--uc-color-white-default);
+    
+    &__header{
+        &__title{
+            font-size: 3rem;
+            font-weight: 700;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 100rem;
+        }
+
+        &__cross{
+            font-size: 2.4rem;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease all;
+}
+
+.modal-back{
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: rgba(255,255,255,0.3);
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease all;
+}
+
+@media (max-width: 1024px) {
+    .modal{
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal .modal__header .modal__header__title{
+        font-size: 1.6rem;
+        padding: 2rem;
+        overflow: auto;
+            white-space: unset;
+            text-overflow: unset;
+            max-width: unset;
+    }
+}

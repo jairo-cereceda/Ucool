@@ -1,0 +1,32 @@
+.radio-setting{
+    margin-top: 1rem;
+
+    &__title{
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    &__group{
+        
+        &__label{
+            font-weight: 700;
+            font-size: 1.6rem;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            transition: 0.1s all ease;
+        }
+
+        &__label:hover{
+            background-color: var(--uc-color-secondary-100);
+        }
+
+        
+        &__input{
+            display: none;
+        }
+
+        &__input:checked + .radio-setting__group__label{
+            background-color: var(--uc-color-secondary-100);
+        }
+    }
+}

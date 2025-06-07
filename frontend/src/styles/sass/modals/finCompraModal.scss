@@ -1,0 +1,75 @@
+.modal-final-compra{
+    &__main{
+        background-color: var(--uc-color-secondary-400);
+        border-radius: 27px;
+        padding: 1rem;
+
+        label{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        textarea{
+            width: 100%;
+            height: 10rem;
+            border: 1px solid var(--uc-color-white-default-clear);
+            border-radius: 24px;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            padding: 1rem;
+        }
+
+        &__obs{
+            margin-right:10rem;
+        }
+
+        &__email{
+            border: 1px solid var(--uc-color-white-default-clear);
+            border-radius: 24px;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+            padding: 1rem;
+            min-width: 20rem;
+            font-size: 1.6rem;
+        }
+
+        &__btns{
+            font-size: 1.4rem;
+            font-weight: 600;
+
+            &__descuento{
+                background-color: var(--uc-color-primary-700);
+                padding: 1rem 3rem;
+                border-bottom-left-radius: 24px;
+                border-top-left-radius: 24px;
+                transition: 0.2s ease all;
+                cursor: pointer;
+            }
+
+            &__submit{
+                background-color: var(--uc-color-details-400);
+                padding: 1rem 3rem;
+                border-bottom-right-radius: 24px;
+                border-top-right-radius: 24px;
+                transition: 0.2s ease all;
+                cursor: pointer;
+            }
+
+            &__descuento:hover{
+                background-color: var(--uc-color-primary-600);
+            }
+
+            &__submit:hover{
+                background-color: var(--uc-color-details-300);
+            }
+        }
+    }
+
+    
+}
+
+@media (max-width: 1024px) {
+    .modal-final-compra__main__obs {
+        margin-right: 0;
+    }
+}

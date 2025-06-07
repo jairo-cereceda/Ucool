@@ -1,0 +1,74 @@
+.metricasCard{
+    background-color: var(--uc-color-secondary-300);
+    padding: 2rem;
+    border-radius: 30px;
+
+    &__title{
+        font-size: 3.6rem;
+        font-weight: 700;
+        color: var(--uc-color-white-default);
+    }
+
+    &__content{
+        background-color: var(--uc-color-secondary-100);
+        padding: 2rem;
+        border-radius: 21px;
+        font-size: 3.9rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .positive-balance{
+        color: var(--uc-color-green-default);
+    }
+
+    .negative-balance{
+        color: var(--uc-color-red-default);
+    }
+
+    .neutral-money-info{
+        color: var(--uc-color-black-default);
+    }
+}
+
+.metricasCard-chart{
+    background-color: var(--uc-color-secondary-300);
+    padding: 2rem;
+    border-radius: 30px;
+
+    &__title{
+        font-size: 3.6rem;
+        font-weight: 700;
+        color: var(--uc-color-white-default);
+    }
+
+    &__content{
+        background-color: var(--uc-color-secondary-100);
+        padding: 2rem;
+        border-radius: 21px;
+        text-align: center;
+    }
+
+    .positive-balance{
+        color: var(--uc-color-green-default);
+    }
+
+    .negative-balance{
+        color: var(--uc-color-red-default);
+    }
+
+    .neutral-money-info{
+        color: var(--uc-color-black-default);
+    }
+}
+
+@media (max-width: 1024px) {
+    .metricasCard{
+       &__title{
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--uc-color-white-default);
+        }
+        
+    }
+}
