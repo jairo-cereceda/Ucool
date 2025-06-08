@@ -31,6 +31,8 @@ services:
       - ./ssl/selfsigned.crt:/etc/ssl/certs/selfsigned.crt:ro
       - ./ssl/selfsigned.key:/etc/ssl/private/selfsigned.key:ro
       - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - ucool-net
 
   mongo:
     image: mongo:latest
