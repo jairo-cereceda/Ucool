@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../components/header/headerPage";
+import { toast } from "react-toastify";
 import Footer from "../../components/footer/footerPage";
 
 export default function PanelContacto() {
@@ -18,17 +19,28 @@ export default function PanelContacto() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const backendURL = import.meta.env.VITE_API_HOST;
-    const response = await fetch(`${backendURL}/contacto`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(emailBody),
-    });
+    try {
+      const response = await fetch(`${backendURL}/contacto`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(emailBody),
+      });
 
-    await response.json();
+      if (!response.ok) {
+        toast.error("Algo salió mal");
+        return;
+      }
 
-    setEmailBody({ nombre: "", email: "", asunto: "", contenido: "" });
+      await response.json();
+
+      toast.success("Email enviado.");
+      setEmailBody({ nombre: "", email: "", asunto: "", contenido: "" });
+    } catch (error) {
+      toast.error("Algo salió mal, por favor inténtelo más tarde.");
+      error;
+    }
   };
 
   return (
