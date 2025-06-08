@@ -5,9 +5,9 @@ export default function Header() {
   return (
     <header className="header">
       <nav className="header__nav flex justify-between items-center">
-        <Link to="#" className="header__nav__home">
+        <a href="http://44.214.199.224/landing" className="header__nav__home">
           <img src="logo.png" alt="" className="header__nav__home__logo" />
-        </Link>
+        </a>
 
         <Link to="/login" className="header__nav__access">
           Acceder
