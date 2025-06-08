@@ -30,6 +30,9 @@
 }
 
 @media (max-width: 1024px) {
+    body{
+        overflow: hidden;
+    }
     .listaElementos__ul__li__content{
         flex-direction: column;
 
@@ -48,30 +51,47 @@
 
     .visorPDF{
         position: absolute;
-        position: absolute;
         z-index: 100;
-        top: 50%;
+        top: 65%;
         left: 50%;
         transform: translate(-50%, -50%);
         transition: 0.3s ease all;
+        overflow: hidden;
+
+        .pdf-page-desk{
+            display: none;
+        }
+
+        .pdf-page-mobile{
+            display: block;
+        }
+
+        .visorPDF-close-btn{
+            display: block;
+            font-size: 4rem;
+            color: var(--uc-color-white-default);
+        }
     }
+
+    
 
     .visorPDF-back{
-    position: absolute;
-    top:0;
-    left: 0;
-    background-color: rgba(255,255,255,0.3);
-    width: 100%;
-    height: 100%;
-    transition: 0.3s ease all;
-
-    .visorPDF-close-btn{
-        display: block;
+        position: absolute;
+        top:0;
+        left: 0;
+        background-color: var(--uc-color-black-default);
+        width: 100%;
+        height: 100%;
+        transition: 0.3s ease all;
     }
-}
+
+    
 }
 
+.pdf-page-mobile{
+    display: none;
+}
 
 .visorPDF-close-btn{
-    display: hidden;
+    display: none;
 }

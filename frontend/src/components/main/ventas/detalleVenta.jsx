@@ -17,7 +17,6 @@ export default function PanelDetalleVenta({ venta }) {
     setNumPages(numPages);
   };
 
-  // let rutaPDF = "";
   useEffect(() => {
     if (venta?.url_ticket) {
       setRutaPdf(`${import.meta.env.VITE_IMG_HOST}${venta.url_ticket}`);
@@ -31,12 +30,7 @@ export default function PanelDetalleVenta({ venta }) {
     <div>
       {numPages ? <div className="visorPDF-back"></div> : null}
       <div className={`h-full overflow-auto p-4 ${numPages ? "visorPDF" : ""}`}>
-        <div className="flex justify-center items-start">
-          <Document file={rutaPDF} onLoadSuccess={handleLoadSuccess}>
-            {Array.from(new Array(numPages), (el, index) => (
-              <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-            ))}
-          </Document>
+        {numPages ? (
           <button
             onClick={() => {
               setNumPages(null);
@@ -46,6 +40,30 @@ export default function PanelDetalleVenta({ venta }) {
           >
             <RxCross2 />
           </button>
+        ) : null}
+        <div className="flex justify-center items-start">
+          <Document
+            file={rutaPDF}
+            onLoadSuccess={handleLoadSuccess}
+            className="pdf"
+          >
+            {Array.from(new Array(numPages), (el, index) => (
+              <Page
+                key={`page_${index + 1}`}
+                className="pdf-page-desk"
+                pageNumber={index + 1}
+              />
+            ))}
+
+            {Array.from(new Array(numPages), (el, index) => (
+              <Page
+                key={`page_${index + 1}`}
+                className="pdf-page-mobile"
+                scale={0.6}
+                pageNumber={index + 1}
+              />
+            ))}
+          </Document>
         </div>
       </div>
     </div>
