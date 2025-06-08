@@ -28,8 +28,8 @@ services:
     volumes:
       - ./frontend:/app
       - /app/node_modules
-      - /home/ubuntu/ssl/selfsigned.crt:/etc/ssl/certs/selfsigned.crt:ro
-      - /home/ubuntu/ssl/selfsigned.key:/etc/ssl/private/selfsigned.key:ro
+      - ./ssl/selfsigned.crt:/etc/ssl/certs/selfsigned.crt:ro
+      - ./ssl/selfsigned.key:/etc/ssl/private/selfsigned.key:ro
       - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf:ro
 
   mongo:
