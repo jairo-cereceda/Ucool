@@ -107,7 +107,7 @@ export default function PanelLogin() {
                 </button>
                 <Link
                   to="#"
-                  className="login__container__main__formulario__botones__google flex items-center"
+                  className="login__container__main__formulario__botones__google flex items-center cursor-not-allowed"
                 >
                   <img
                     src="/google.png"
