@@ -22,7 +22,7 @@ export default function PanelDetalleVenta({ venta }) {
 
   return (
     <div className="h-full overflow-auto p-4">
-      <div className="aspect-[210/297]">
+      <div className="flex justify-center">
         <Document file={rutaPDF} onLoadSuccess={handleLoadSuccess}>
           {Array.from(new Array(numPages), (el, index) => (
             <Page key={`page_${index + 1}`} pageNumber={index + 1} />
