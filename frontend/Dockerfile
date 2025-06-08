@@ -14,5 +14,5 @@ COPY landing /usr/share/nginx/html/landing
 
 COPY frontend/nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
