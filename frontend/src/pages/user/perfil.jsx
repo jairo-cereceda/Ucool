@@ -5,6 +5,8 @@ import { useAuth } from "../../context/AuthContext";
 import { Link } from "react-router-dom";
 import { MdOutlineModeEdit } from "react-icons/md";
 import { TbDoorExit } from "react-icons/tb";
+import preview from "/src/assets/images/preview.jpg";
+import banner from "/src/assets/images/banner.png";
 
 export default function PanelPerfil() {
   const [perfil, setPerfil] = useState(null);
@@ -79,7 +81,7 @@ export default function PanelPerfil() {
           src={
             imagenBanner && imagenBanner.url
               ? `${import.meta.env.VITE_IMG_HOST}${imagenBanner.url}`
-              : "src/assets/images/banner.png"
+              : banner
           }
           alt=""
           className="panelPerfil__img"
@@ -90,7 +92,7 @@ export default function PanelPerfil() {
               src={
                 imagenPerfil && imagenPerfil.url
                   ? `${import.meta.env.VITE_IMG_HOST}${imagenPerfil.url}`
-                  : "src/assets/images/preview.jpg"
+                  : preview
               }
               alt=""
               className="panelPerfil__info__lateral__img"
