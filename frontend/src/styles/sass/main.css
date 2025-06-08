@@ -1511,6 +1511,10 @@
 .modal-final-compra__main__btns__submit:hover {
   background-color: var(--uc-color-details-300);
 }
+.modal-final-compra .img-venta-product-card {
+  max-height: 35rem;
+  margin: 0 auto;
+}
 
 @media (max-width: 1024px) {
   .modal-final-compra__main__obs {

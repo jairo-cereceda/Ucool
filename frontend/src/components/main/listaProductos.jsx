@@ -160,7 +160,7 @@ export default function ListaProductos({
                     `${import.meta.env.VITE_IMG_HOST}` +
                     productoModal.fotos[0]?.url
                   }
-                  className="rounded-[20px]"
+                  className="rounded-[20px] img-venta-product-card"
                   alt=""
                 />
               )}
