@@ -28,7 +28,7 @@ app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://44.214.199.224",
+    origin: "https://44.214.199.224",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
