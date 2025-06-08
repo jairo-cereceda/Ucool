@@ -24,9 +24,13 @@ services:
     container_name: ucool-frontend
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./frontend:/app
       - /app/node_modules
+      - /home/ubuntu/ssl/selfsigned.crt:/etc/ssl/certs/selfsigned.crt:ro
+      - /home/ubuntu/ssl/selfsigned.key:/etc/ssl/private/selfsigned.key:ro
+      - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf:ro
 
   mongo:
     image: mongo:latest
