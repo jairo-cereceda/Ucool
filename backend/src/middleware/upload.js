@@ -7,14 +7,19 @@ if (!fs.existsSync(storageDir)) {
   fs.mkdirSync(storageDir);
 }
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, storageDir);
+const allowedMimeTypes = ["image/jpeg", "image/png", "image/webp"];
+
+const storage = multer.memoryStorage();
+
+export const upload = multer({
+  storage,
+  limits: {
+    fileSize: 2 * 1024 * 1024,
   },
-  filename: (req, file, cb) => {
-    const ext = path.extname(file.originalname);
-    cb(null, `${Date.now()}-${file.fieldname}${ext}`);
+  fileFilter: (req, file, cb) => {
+    if (!allowedMimeTypes.includes(file.mimetype)) {
+      return cb(new Error("Formato de imagen no permitido"), false);
+    }
+    cb(null, true);
   },
 });
-
-export const upload = multer({ storage });
