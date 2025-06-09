@@ -217,7 +217,7 @@ export default function PanelVenta() {
       setModalSubmitVisible(false);
       setActiveItem("categorias");
     } catch (e) {
-      console.error("Error al crear la venta:", e);
+      e;
     }
   };
 
