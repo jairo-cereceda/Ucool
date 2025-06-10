@@ -6,7 +6,6 @@ import FormularioEditarPerfil from "../../components/forms/edicionPerfil";
 import { useNavigate } from "react-router-dom";
 import preview from "/src/assets/images/preview.jpg";
 import banner from "/src/assets/images/banner.png";
-import imageCompression from "browser-image-compression";
 
 export default function PanelEditarPerfil() {
   const navigate = useNavigate();
@@ -38,7 +37,7 @@ export default function PanelEditarPerfil() {
     imgBannerRef.current.click();
   };
 
-  const handleFilePerfilChange = async (event) => {
+  const handleFilePerfilChange = (event) => {
     const file = event.target.files[0];
     if (file) {
       if (!file.type || !file.type.startsWith("image/")) {
@@ -51,27 +50,13 @@ export default function PanelEditarPerfil() {
         return;
       }
 
-      const options = {
-        maxSizeMB: 1,
-        maxWidthOrHeight: 1024,
-        useWebWorker: true,
-      };
-
-      try {
-        const compressedFile = await imageCompression(file, options);
-
-        setFileImagenPerfil(compressedFile);
-
-        const imageURL = URL.createObjectURL(compressedFile);
-        setImagenPerfilSrc(imageURL);
-      } catch (error) {
-        toast.error("Error al comprimir la imagen");
-        error;
-      }
+      const imageURL = URL.createObjectURL(file);
+      setImagenPerfilSrc(imageURL);
+      setFileImagenPerfil(file);
     }
   };
 
-  const handleFileBannerChange = async (event) => {
+  const handleFileBannerChange = (event) => {
     const file = event.target.files[0];
     if (file) {
       if (!file.type || !file.type.startsWith("image/")) {
@@ -84,23 +69,9 @@ export default function PanelEditarPerfil() {
         return;
       }
 
-      const options = {
-        maxSizeMB: 1,
-        maxWidthOrHeight: 1024,
-        useWebWorker: true,
-      };
-
-      try {
-        const compressedFile = await imageCompression(file, options);
-
-        setFileImagenBanner(compressedFile);
-
-        const imageURL = URL.createObjectURL(compressedFile);
-        setImagenBannerSrc(imageURL);
-      } catch (error) {
-        toast.error("Error al comprimir la imagen");
-        error;
-      }
+      const imageURL = URL.createObjectURL(file);
+      setImagenBannerSrc(imageURL);
+      setFileImagenBanner(file);
     }
   };
 

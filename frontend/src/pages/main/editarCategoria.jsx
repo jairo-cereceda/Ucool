@@ -8,7 +8,6 @@ import PanelFormulario from "../../components/forms/edicionProducto";
 import preview from "/src/assets/images/preview.jpg";
 import { MdOutlineEdit } from "react-icons/md";
 import { toast } from "react-toastify";
-import imageCompression from "browser-image-compression";
 
 export default function PanelEditarCategoria() {
   const activeItem = "Edicion";
@@ -25,7 +24,7 @@ export default function PanelEditarCategoria() {
     fileInputRef.current.click();
   };
 
-  const handleFileChange = async (event) => {
+  const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
       if (!file.type || !file.type.startsWith("image/")) {
@@ -38,23 +37,9 @@ export default function PanelEditarCategoria() {
         return;
       }
 
-      const options = {
-        maxSizeMB: 1,
-        maxWidthOrHeight: 1024,
-        useWebWorker: true,
-      };
-
-      try {
-        const compressedFile = await imageCompression(file, options);
-
-        setFile(compressedFile);
-
-        const imageURL = URL.createObjectURL(compressedFile);
-        setImageSrc(imageURL);
-      } catch (error) {
-        toast.error("Error al comprimir la imagen");
-        error;
-      }
+      const imageURL = URL.createObjectURL(file);
+      setImageSrc(imageURL);
+      setFile(file);
     }
   };
 
