@@ -120,6 +120,7 @@ export default function PanelAdministrarProductos() {
               content="Producto"
               link={`/administrar-categoria/${id}/agregar-producto`}
               list={true}
+              coleccion="productos"
               activarModoEliminar={() => setModoEliminar(!modoEliminar)}
               modoEliminar={modoEliminar}
               activarModoEditar={() => setModoEditar(!modoEditar)}
