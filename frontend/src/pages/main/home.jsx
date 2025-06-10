@@ -17,7 +17,7 @@ export default function PanelHome() {
           />
         ) : (
           <HomeCard
-            img="resources/ventasjpg"
+            img="resources/ventas.jpg"
             title="Administrar"
             direccion="/administrar-ventas"
           />
