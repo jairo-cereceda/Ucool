@@ -6,6 +6,7 @@ import FormularioEditarPerfil from "../../components/forms/edicionPerfil";
 import { useNavigate } from "react-router-dom";
 import preview from "/src/assets/images/preview.jpg";
 import banner from "/src/assets/images/banner.png";
+import imageCompression from "browser-image-compression";
 
 export default function PanelEditarPerfil() {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ export default function PanelEditarPerfil() {
     imgBannerRef.current.click();
   };
 
-  const handleFilePerfilChange = (event) => {
+  const handleFilePerfilChange = async (event) => {
     const file = event.target.files[0];
     if (file) {
       if (!file.type || !file.type.startsWith("image/")) {
@@ -45,13 +46,32 @@ export default function PanelEditarPerfil() {
         return;
       }
 
-      const imageURL = URL.createObjectURL(file);
-      setImagenPerfilSrc(imageURL);
-      setFileImagenPerfil(file);
+      if (file.size > 2 * 1024 * 1024) {
+        toast.error("El archivo es demasiado grande, máximo 2 MB");
+        return;
+      }
+
+      const options = {
+        maxSizeMB: 1,
+        maxWidthOrHeight: 1024,
+        useWebWorker: true,
+      };
+
+      try {
+        const compressedFile = await imageCompression(file, options);
+
+        setFileImagenPerfil(compressedFile);
+
+        const imageURL = URL.createObjectURL(compressedFile);
+        setImagenPerfilSrc(imageURL);
+      } catch (error) {
+        toast.error("Error al comprimir la imagen");
+        error;
+      }
     }
   };
 
-  const handleFileBannerChange = (event) => {
+  const handleFileBannerChange = async (event) => {
     const file = event.target.files[0];
     if (file) {
       if (!file.type || !file.type.startsWith("image/")) {
@@ -59,9 +79,28 @@ export default function PanelEditarPerfil() {
         return;
       }
 
-      const imageURL = URL.createObjectURL(file);
-      setImagenBannerSrc(imageURL);
-      setFileImagenBanner(file);
+      if (file.size > 2 * 1024 * 1024) {
+        toast.error("El archivo es demasiado grande, máximo 2 MB");
+        return;
+      }
+
+      const options = {
+        maxSizeMB: 1,
+        maxWidthOrHeight: 1024,
+        useWebWorker: true,
+      };
+
+      try {
+        const compressedFile = await imageCompression(file, options);
+
+        setFileImagenBanner(compressedFile);
+
+        const imageURL = URL.createObjectURL(compressedFile);
+        setImagenBannerSrc(imageURL);
+      } catch (error) {
+        toast.error("Error al comprimir la imagen");
+        error;
+      }
     }
   };
 

@@ -28,7 +28,7 @@ export default function AgregarCategoria() {
       }
 
       if (file.size > 2 * 1024 * 1024) {
-        toast.error("El archivo es demasiado grande");
+        toast.error("El archivo es demasiado grande, máximo 2 MB");
         return;
       }
 
