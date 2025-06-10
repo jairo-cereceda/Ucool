@@ -80,7 +80,7 @@ export default function PanelAdministrarProductos() {
         );
 
         if (response.ok) {
-          toast.success("Categoría eliminada con éxito");
+          toast.success("Producto eliminado con éxito");
           setProductosFotos((prev) =>
             prev.filter((item) => item._id !== productToDelete._id)
           );
