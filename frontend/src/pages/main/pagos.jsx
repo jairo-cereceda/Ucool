@@ -8,17 +8,17 @@ export default function PanelPagos() {
       <Header />
       <div className="flex items-center justify-center gap-5 px-5 panelAdminsitrar-list">
         <HomeCard
-          img="resources/compras.png"
+          img="resources/compras.jpg"
           title="Compras"
           direccion="/administrar-compras"
         />
         <HomeCard
-          img="resources/gastos-operativos.png"
+          img="resources/gastos-operativos.jpg"
           title="Gastos operativos"
           direccion="/administrar-gastos-operativos"
         />
         <HomeCard
-          img="resources/proveedores.png"
+          img="resources/proveedores.jpg"
           title="Proveedores"
           direccion="/administrar-proveedores"
         />

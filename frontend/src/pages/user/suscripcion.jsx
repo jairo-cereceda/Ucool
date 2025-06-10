@@ -118,7 +118,7 @@ export default function PanelSuscripcion() {
             </div>
           </div>
         </div>
-        <img src="resources/mostrador.png" alt="" className="w-full" />
+        <img src="resources/mostrador.jpg" alt="" className="w-full" />
       </form>
     </div>
   );

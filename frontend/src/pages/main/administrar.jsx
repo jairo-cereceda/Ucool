@@ -8,22 +8,22 @@ export default function PanelAdministrar() {
       <Header />
       <div className="flex items-center justify-center gap-5 px-5 panelAdminsitrar-list">
         <HomeCard
-          img="resources/productos.png"
+          img="resources/productos.jpg"
           title="Productos"
           direccion="/administrar-categoria"
         />
         <HomeCard
-          img="resources/pagos.png"
+          img="resources/pagos.jpg"
           title="Pagos"
           direccion="/administrar-pagos"
         />
         <HomeCard
-          img="resources/ventas.png"
+          img="resources/ventas.jpg"
           title="Ventas"
           direccion="/administrar-ventas"
         />
         <HomeCard
-          img="resources/usuario.png"
+          img="resources/usuario.jpg"
           title="Usuarios"
           direccion="/administrar-usuarios"
         />
