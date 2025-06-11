@@ -21,7 +21,7 @@ export default function LineChartCard() {
     })
       .then((res) => res.json())
       .then((data) => {
-        setProgreso(data.reverse());
+        setProgreso(data);
       })
       .catch((error) => console.error("Error al obtener productos:", error));
   }, []);
