@@ -24,3 +24,6 @@ This project is built using the **MERN** stack for high performance and scalabil
 -   **Authentication:** Secure user access via JSON Web Tokens (JWT).
 
 ---
+
+## ✒️ Author
+Jairo Cereceda - [GitHub Profile](https://github.com/jairo-cereceda)
